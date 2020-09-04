@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
     console.log(argsList);
  
     if (argsList[2] == undefined) argsList[2] = "#ff0000";
-    if (argsList[3] == undefined) argsList[3] = "📜match-info";
+    if (argsList[3] == undefined) argsList[3] = "「📜」match-info";
  
     var options = {
  
