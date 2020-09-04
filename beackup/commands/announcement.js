@@ -21,18 +21,17 @@ module.exports.run = async (client, message, args) => {
  
     console.log(argsList);
  
-    if (argsList[2] == undefined) argsList[2] = "#fc0303";
+    if (argsList[2] == undefined) argsList[2] = "#00f7df";
     if (argsList[3] == undefined) argsList[3] = "「📢」meldingen";
  
     var options = {
  
         titel: argsList[0],
         bericht: argsList[1] || "Geen inhoud opgegeven",
-        kleur: argsList[2].trim()
-     ,
+        kleur: argsList[2].trim(),
         kanaal: argsList[3].trim()
  
-    }
+    };
  
     console.log(options);
  
