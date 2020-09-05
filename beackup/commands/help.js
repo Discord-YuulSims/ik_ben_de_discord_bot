@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
    try{
 
     var helpEmbed = new discord.MessageEmbed()
-    .setTitle(client.user.avatarURL() "**YuulSims Sever Bot Commando's.**")
+            .setTitle("**YuulSims Sever Bot Commando's.**", client.user.avatarURL())
             .setThumbnail(boticon)
             .setFooter("©YuulSims Server | Met dank dank aan Jonasvldv ❤️")
             .setColor("#24f8ff")
