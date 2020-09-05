@@ -8,6 +8,7 @@ module.exports.run = async (client, message, args) => {
     var helpEmbed = new discord.MessageEmbed()
             .setTitle("**YuulSims Sever Bot Commando's.**", (boticon))
             .setThumbnail(boticon)
+            .setAuthor(client.user.tag, client.user.avatarURL()) 
             .setFooter("©YuulSims Server | Met dank dank aan Jonasvldv ❤️")
             .setColor("#24f8ff")
             .setDescription("**Fijn dat je zijn commando's wilt opvragen.** \n**Elk commando moet je opvragen met !.**")
