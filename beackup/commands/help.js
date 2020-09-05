@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
             .setColor("#24f8ff")
             .setDescription("**Fijn dat je zijn commando's wilt opvragen.** \n**Elk commando moet je opvragen met !.**")
             .addField("\n**__Algemeen__**", "**!hallo** Zeg hallo tegen de bot. \n**!review** We zouden het leuk vinden als je een review schrijft over de server.\n")
-            .blankfield
+            .addField()
             .addField("\n**__Info__**", "**!help** Dan krijg je dit berichtje! \n**!ping** Laat de respnstijd zien van de bot. \n**!regels** Kan je ook terug vinden in hnet channel van de regels. \n**!welkom** Kan je ook terug vinden het het welkoms channel. \n**!ranks** Laat de ranks zien van de server. \n**!match** Kan je terug vinden in het vast gepinde bericht in Match-info.")
             .addField("\n**__Games__**", "**!rps** Speel blad, steen, schaar. \n**COMMING SOON**")
             .addField("\n**__Ticket__**", "**!ticket** Maak een ticket aan.\n**!close** doe het ticket toe.")
