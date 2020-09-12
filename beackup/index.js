@@ -100,21 +100,21 @@ client.on("ready", async () => {
 
 client.on("messageDelete", messageDelete => {
 
-    if(messageDelete.author.bot) return;
+    if (messageDelete.author.bot) return;
 
     var conten = messageDelete.content;
 
-    if(!conten) conten = "Geen tekste te vinden.";
+    if (!conten) conten = "Geen tekste te vinden.";
 
     var respns = `Bericht ${messageDelete.id} is verwijderd uit ${messageDelete.channel}\n **Bericht:** ${conten}`;
 
     var deleteEmbed = new discord.MessageEmbed()
-    .setAuthor(`${messageDelete.author.tag},${messageDelete.author.id}`,`${messageDelete.author.displayAvatarURL}`)
-    .setDescription(respns)
-    .setColor("RANDOM")
-    .setTimestamp()
-    .setFooter("©YuulSims Server")
-    .setThumbnail(`https://static.thenounproject.com/png/223194-200.png`);
+        .setAuthor(`${messageDelete.author.tag},${messageDelete.author.id}`, `${messageDelete.author.avatarURL({ size: 4096 })}`)
+        .setDescription(respns)
+        .setColor("RANDOM")
+        .setTimestamp()
+        .setFooter("©YuulSims Server")
+
 
     client.channels.cache.find(c => c.name == "「💬」staff-info").send(deleteEmbed);
 
@@ -153,9 +153,9 @@ client.on("message", async message => {
         var changeWord = "";
 
         for (let i = 0; i < Object.keys(swearWords["vloekWoorden"]).length; i++) {
-           
+
             if (msg.includes(swearWords["vloekWoorden"][i])) {
-                
+
                 changeWord = words.replace(swearWords["vloekWoorden"][i], `******`);
 
                 senteceUser += " " + changeWord;
