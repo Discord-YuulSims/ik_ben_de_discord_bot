@@ -116,7 +116,7 @@ client.on("messageDelete", messageDelete => {
     .setFooter("©YuulSims Server")
     .setThumbnail(messageDelete.author.avatarURL);
 
-    client.channels.cache.find("691654989029965824").send(deleteEmbed);
+    client.channels.cache.find(c => c.name == "「💬」staff-info").send(deleteEmbed);
 
 }).
 
