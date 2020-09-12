@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 
     var ledenEmbed = new discord.MessageEmbed()
         .setColor("RANDOM")
-        .setAuthor(`${message.author.name}`, `${message.author.avatarURL({ size: 4096 })}`)
+        .setAuthor(`${message.author.tag}`, `${message.author.avatarURL({ size: 4096 })}`)
         .setThumbnail(icon)
         .addField("Leden:", ledenTotal, true)
         .addField("Mensen:", mernsen, true)

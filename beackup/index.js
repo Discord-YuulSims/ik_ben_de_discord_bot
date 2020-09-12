@@ -73,12 +73,18 @@ client.on("guildMemberRemove", member => {
 
     var userIcon = member.user.avatarURL();
 
+    var ledenTotal = message.guild.memberCount;
+
+    var Bots = message.guild.members.cache.filter(m => m.user.bot).size;
+
+    var mernsen = ledenTotal - Bots;
+
     var joinMessage = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL())
         .setThumbnail(userIcon)
         .setDescription(`**${member.user.username} heeft de server verlaten.** \n Met pijn in het hart moeten wij afscheidt nemen van ${member.user.username}`)
         .setColor("#ff5500")
-        .addField("We zijn nog met:", member.guild.memberCount)
+        .addField("We zijn nog met:", mernsen)
         .setTimestamp()
         .setFooter("©YuulSims Server | Gebruiker geleavd");
 
