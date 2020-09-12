@@ -25,10 +25,10 @@ module.exports.run = async (client, message, args) => {
             .setColor('RED');
            
         message.author.send(helpEmbed).then(
-            discord.ReactionEmoji(':eyb_garage_night:').then(
+            discord.ReactionEmoji(':eyb_garage_night:'));/*.then(
                 
         message.author.send(GAMEEMBED)));
-
+*/
 
         message.reply("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
 
