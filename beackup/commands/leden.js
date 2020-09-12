@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     var mernsen = ledenTotal - Bots;
 
-    var online = message.guild.members.cache.filter(m => m.user.presence.status == "online" || m.user.presence.status == "dnd" || m.user.presence.status == "idle");
+    var online = message.guild.members.cache.filter(m => m.user.presence.status == "online" || m.user.presence.status == "dnd" || m.user.presence.status == "idle").size;
 
     var ledenEmbed = new discord.MessageEmbed()
         .setColor("RANDOM")
