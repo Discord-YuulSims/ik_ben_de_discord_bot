@@ -109,12 +109,12 @@ client.on("messageDelete", messageDelete => {
     var respns = `Bericht ${messageDelete.id} is verwijderd uit ${messageDelete.channel}\n **Bericht:** ${conten}`;
 
     var deleteEmbed = new discord.MessageEmbed()
-    .setAuthor(`${messageDelete.author.id} ${messageDelete.author.tag}`, messageDelete.author.displayAvatarURL)
+    .setAuthor(`${messageDelete.author.tag},${messageDelete.author.id}`,`${messageDelete.author.displayAvatarURL}`)
     .setDescription(respns)
     .setColor("RANDOM")
     .setTimestamp()
     .setFooter("©YuulSims Server")
-    .setThumbnail(messageDelete.author.avatarURL);
+    .setThumbnail(`${messageDelete.author.avatarURL}`);
 
     client.channels.cache.find(c => c.name == "「💬」staff-info").send(deleteEmbed);
 
