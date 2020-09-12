@@ -118,7 +118,7 @@ client.on("messageDelete", messageDelete => {
 
     client.channels.cache.find(c => c.name == "「💬」staff-info").send(deleteEmbed);
 
-}).
+});
 
 client.on("message", async message => {
 
