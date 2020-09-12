@@ -10,9 +10,12 @@ module.exports.run = async (client, message, args) => {
 
     var online = message.guild.members.cache.filter(m => m.user.presence.status == "online" || m.user.presence.status == "dnd" || m.user.presence.status == "idle").size;
 
+    var icon = message.guild.iconURL();
+
     var ledenEmbed = new discord.MessageEmbed()
         .setColor("RANDOM")
-        //.setAuthor(`${message.guild.name}`, `${message.guild.avatarURL({ size: 4096 })}`)
+        .setAuthor(`${message.author.name}`, `${message.author.avatarURL({ size: 4096 })}`)
+        .setThumbnail(icon)
         .addField("Leden:", ledenTotal, true)
         .addField("Mensen:", mernsen, true)
         .addField("Bots:", Bots, true)
