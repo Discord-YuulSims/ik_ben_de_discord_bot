@@ -24,16 +24,23 @@ module.exports.run = async (client, message, args) => {
             .setDescription('test')
             .setColor('RED');
            
-             message.author.send(helpEmbed).then(async msg => {
+        message.author.send(helpEmbed).then(async msg => {
  
-                var emoji = await promptMessage(msg, message.author, 30, ["👍", "❌"]);
+            var emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+ 
+ 
+            if (emoji === "✅") {
+ 
                 
-            if (emoji === "👍") {
-                message.author.send('Hallo je hebt er op geklikt')};
-            });
-            /*.then(
+ 
+            } else if (emoji === "❌") {
+ 
+               
+ 
+            }
         
-            
+        });
+        /*
             
         message.author.send(GAMEEMBED)));
 */
