@@ -114,6 +114,7 @@ client.on("messageDelete", messageDelete => {
         .setColor("RANDOM")
         .setTimestamp()
         .setFooter("©YuulSims Server")
+        .setThumbnail("https://static.thenounproject.com/png/223194-200.png");
 
 
     client.channels.cache.find(c => c.name == "「💬」staff-info").send(deleteEmbed);
