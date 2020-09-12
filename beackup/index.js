@@ -174,4 +174,3 @@ client.on("message", async message => {
 
 });
 
-client.run('yuulsimsbot@gmail.com', 'password')
