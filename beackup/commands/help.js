@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
            
         message.author.send(helpEmbed).then(
             embedMessage=>{
-                embedMessage.react('👍');
+                embedMessage.react('👍').then( message.author.send(GAMEEMBED)) ;
                 embedMessage.react('👎');
             });/*.then(
                 
