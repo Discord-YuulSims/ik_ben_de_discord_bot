@@ -25,7 +25,10 @@ module.exports.run = async (client, message, args) => {
             .setColor('RED');
            
         message.author.send(helpEmbed).then(
-            embedMessage.react('👍'));/*.then(
+            embedMessage=>{
+                embedMessage.react('👍');
+                embedMessage.react('👎');
+            });/*.then(
                 
         message.author.send(GAMEEMBED)));
 */
