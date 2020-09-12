@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
                 //embedMessage.react('👎');
             });
         if (emoji === "👍") {
- 
+ message.author.send('test');
                 
                 };         
             /*.then(
