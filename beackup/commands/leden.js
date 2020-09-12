@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 
     var ledenEmbed = new discord.MessageEmbed()
         .setColor("RANDOM")
-        .setAuthor(`${message.guild.name}`, `${message.guild.avatarURL({ size: 4096 })}`)
+        //.setAuthor(`${message.guild.name}`, `${message.guild.avatarURL({ size: 4096 })}`)
         .addField("Leden:", ledenTotal, true)
         .addField("Mensen:", mernsen, true)
         .addField("Bots:", Bots, true)
