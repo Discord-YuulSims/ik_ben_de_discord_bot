@@ -98,7 +98,27 @@ client.on("ready", async () => {
 
 //var swearWords = ["kanker, piemel, pik, penis, vagina, bitch,  fack you, kut"];
 
+client.on("messageDelete", messageDelete => {
 
+    if(messageDelete.author.bot) return;
+
+    var conten = messageDelete.content;
+
+    if(!conten) conten = "Geen tekste te vinden.";
+
+    var respns = `Bericht ${messageDelete.id} is verwijderd uit ${messageDelete.channel}\n **Bericht:** ${conten}`;
+
+    var deleteEmbed = new discord.MessageEmbed()
+    .setAuthor(`${messageDelete.author.id} ${messageDelete.author.tag}`, messageDelete.author.displayAvatarURL)
+    .setDescription(respns)
+    .setColor("RANDOM")
+    .setTimestamp()
+    .setFooter("©YuulSims Server")
+    .setThumbnail(messageDelete.author.avatarURL);
+
+    client.channels.cache.find("691654989029965824").send(deleteEmbed);
+
+}).
 
 client.on("message", async message => {
 
