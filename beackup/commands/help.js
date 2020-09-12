@@ -26,11 +26,16 @@ module.exports.run = async (client, message, args) => {
            
         message.author.send(helpEmbed).then(
             embedMessage=>{
-                var emoji = promptMessage(msg, message.author, 30, ["✅", "❌"]);
+                var emoji = embedMessage.react('👍');
                 //embedMessage.react('👍');
                 //embedMessage.react('👎');
-            });/*.then(
+            });
+        if (emoji === "👍") {
+ 
                 
+                };         
+            /*.then(
+        
         message.author.send(GAMEEMBED)));
 */
 
