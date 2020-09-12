@@ -21,8 +21,8 @@ module.exports.run = async (client, message, args) => {
  
     console.log(argsList);
  
-    if (argsList[2] == undefined) argsList[2] = "#fc0303";
-    if (argsList[3] == undefined) argsList[3] = "🔗server";
+    if (argsList[2] == undefined) argsList[2] = "#00f7df";
+    if (argsList[3] == undefined) argsList[3] = "「📢」meldingen";
  
     var options = {
  
@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
         kleur: argsList[2].trim(),
         kanaal: argsList[3].trim()
  
-    }
+    };
  
     console.log(options);
  
@@ -40,7 +40,7 @@ module.exports.run = async (client, message, args) => {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setColor(options.kleur)
         .setDescription(`\n ${options.bericht}`)
-        .setFooter("©YuulSims Server |")
+        .setFooter("©YuulSims Server")
         .setTimestamp();
  
     var channel = message.member.guild.channels.cache.find(channel => channel.name === options.kanaal);
