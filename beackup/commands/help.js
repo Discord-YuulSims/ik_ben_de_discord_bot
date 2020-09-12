@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args) => {
             .setColor('RED');
            
         message.author.send(helpEmbed).then(
-            discord.ReactionEmoji(':eyb_garage_night:'));/*.then(
+            embedMessage.react('👍'));/*.then(
                 
         message.author.send(GAMEEMBED)));
 */
