@@ -24,12 +24,18 @@ module.exports.run = async (client, message, args) => {
             .setDescription('test')
             .setColor('RED');
            
-        message.author.send(helpEmbed).then(
+            var emoji = await message.author.send(helpEmbed).then(
             embedMessage=>{
-                embedMessage.react('👍').then( message.author.send(GAMEEMBED)) ;
+                embedMessage.react('👍');
                 embedMessage.react('👎');
-            });/*.then(
-                
+            });
+            if (emoji === "👍") {
+                message.author.send('Hallo je hebt er op geklikt');
+            };
+            /*.then(
+        
+            
+            
         message.author.send(GAMEEMBED)));
 */
 
