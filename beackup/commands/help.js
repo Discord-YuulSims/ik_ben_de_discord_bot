@@ -1,4 +1,4 @@
-const discord = require("discord.js");
+/*const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
@@ -34,12 +34,12 @@ module.exports.run = async (client, message, args) => {
                 //embedMessage.react('👍');
                 //embedMessage.react('👎');
             });
-      
+      */
         /*.then(
     
     message.author.send(GAMEEMBED)));
 */
-
+/*
         message.reply("Al de commando's staan in je privé berichten! :mailbox_with_mail:");
 
 
@@ -56,4 +56,4 @@ module.exports.help = {
 
 
 }
-
+*/
