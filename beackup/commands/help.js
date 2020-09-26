@@ -24,10 +24,10 @@ module.exports.run = async (client, message, args) => {
             .setDescription('test')
             .setColor('RED');
 
-        message.author.send(helpEmbed).then(
+        message.channel.send(helpEmbed).then(
             embedMessage => {
                 var emoji = embedMessage.react('👍');
-                if (emoji === "👍") {
+                if (emoji === "👍"){
                     message.author.send('test');
         
                 };
